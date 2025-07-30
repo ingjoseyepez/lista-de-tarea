@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas con Pomodoro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestor de Tareas</h1>
+        <div id="fecha">
+            <span id="nombre-dia"></span> 
+            <span id="mes"></span>
+            <span id="dia"></span> 
+            <span id="año"></span>
+          </div>
+        <div class="task-input">
+            <input type="text" id="taskName" placeholder="Nueva tarea...">
+            <input type="number" min="0" max="60" id="pomodoroDuration" placeholder="Tiempo">
+            <button id="addTaskBtn"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        
+        <ul id="taskList"></ul>
+    </div>
+
+    <template id="taskTemplate">
+        <li class="task-item">
+            <input type="checkbox" class="task-complete-checkbox">
+            <span class="task-name"></span>
+            <span class="task-timer"><span class="time-left"></span></span>
+            <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+            <button class="delete-btn"><i class="fa-solid fa-trash-can"></i></button>
+            <button class="start-timer-btn"><i class="fa-solid fa-play"></i></button>
+        </li>
+    </template>
+    
+    <script src="script.js"></script>
+</body>
+</html>

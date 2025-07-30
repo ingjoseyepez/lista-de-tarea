@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, #33b175, #32c6c0, #86d5ec, #cfe3f9, #f8f8f8);
+}
+
+.container {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  color: #f9f9f9;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #18a093;
+  border-radius: 10px;
+}
+#fecha{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+#nombre-dia {
+    width: 100%;
+    color:#000;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+  
+  }
+  
+  #dia {
+    color:#000;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  #mes {
+    color:#000;
+    font-style: italic;
+    font-size: 20px; 
+     margin-right: 10px;
+  }
+  
+  #año {
+    color:#000;
+    font-size: 20px;
+  }
+
+.task-input {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+input[type=number]{
+ width:80px;
+ color: #000;
+} 
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #18a093;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #fc4b08; 
+}
+
+ul {
+  list-style: none;
+}
+
+.task-item {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-name {
+  width: 100px;  
+  flex: 1;
+}
+
+.task-timer {
+  margin-right: 10px;
+}
+
+.delete-btn,
+.edit-btn,
+.start-timer-btn {
+  background-color: #18a093;
+  margin-left: 5px;
+  padding: 8px 10px;
+  border: none;
+  color: white;
+  border-radius: 4px;
+}
+
+.delete-btn:hover,
+.edit-btn:hover,
+.start-timer-btn:hover {
+  background-color: #fc4b08;
+}
+.task-complete-checkbox{
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+}
+.task-item.completed .task-name {
+  text-decoration: line-through;
+  color: rgb(16, 10, 10);
+}
+
+.task-item.active {
+  background-color: #77DD77; /* Verde para "en ejecución" */
+}
+
+.task-item.paused {
+  background-color: #FDFD96; /* Amarillo para "pausado" */
+}
+
+.task-item.completed {
+  background-color: #FF6961; /* Rojo para "completado" */
+}
